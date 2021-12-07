@@ -1,0 +1,43 @@
+@import "../../Sass/main.scss";
+
+.landing {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  padding-bottom: 20vh;
+  .hero {
+    text-align: left;
+    position: relative;
+    width: 320px;
+    height: 450px;
+    .hero-title {
+      font-family: $header-font;
+      font-size: 4vh;
+      z-index: 1;
+    }
+    .hero-img {
+      width: 250px;
+      position: absolute;
+      top: 30%;
+      right: -5%;
+      z-index: -1;
+    }
+    .hero-date {
+      position: absolute;
+      bottom: 0%;
+    }
+  }
+  .search {
+    .search-box {
+      width: 100%;
+      .search-bar {
+        width: 100%;
+      }
+      .search-icon {
+        left: 10%;
+      }
+    }
+  }
+}

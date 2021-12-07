@@ -1,0 +1,20 @@
+@import "../../Sass/main.scss";
+
+.results {
+  .results-info {
+    .location {
+      font-family: $header-font;
+    }
+  }
+  .weather {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    .weather-temp {
+      font-family: $header-font;
+      position: relative;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+}

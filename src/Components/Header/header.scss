@@ -1,0 +1,12 @@
+@import "../../Sass/main.scss";
+
+.header {
+  border-bottom: 1px solid black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2% 5% 2% 5%;
+  .logo {
+    width: 7em;
+  }
+}

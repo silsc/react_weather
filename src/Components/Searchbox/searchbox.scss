@@ -1,0 +1,25 @@
+@import "../../Sass/main.scss";
+
+.search-box {
+  position: relative;
+  width: 250px;
+  .search-bar {
+    background-color: $orange;
+    border: 1px solid black;
+    padding: 6% 5% 6% 20%;
+    border-radius: 20px;
+    font-family: $body-font;
+    &::placeholder {
+      color: black;
+      opacity: 1; 
+    }
+  }
+  .search-icon {
+    width: 1.5em;
+    height: 1.5em;
+    position: absolute;
+    left: 10%;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
