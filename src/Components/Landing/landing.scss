@@ -5,39 +5,57 @@
   flex-direction: column;
   align-items: center;
   width: 100vw;
-  height: 100vh;
+  height: 97vh;
   padding-bottom: 20vh;
   .hero {
     text-align: left;
     position: relative;
     width: 320px;
     height: 450px;
-    .hero-title {
+    &-title {
       font-family: $header-font;
       font-size: 4vh;
       z-index: 1;
     }
-    .hero-img {
+    &-img {
       width: 250px;
       position: absolute;
       top: 30%;
       right: -5%;
-      z-index: -1;
-    }
-    .hero-date {
-      position: absolute;
-      bottom: 0%;
+      &-wrapper {
+        width: 250px;
+        position: absolute;
+        top: 30%;
+        right: -5%;
+        z-index: 1;
+        &:hover {
+          .hero-img {
+            transition: 0.9s;
+            transform: rotateZ(720deg);
+          }
+        }
+      }
     }
   }
   .search {
-    .search-box {
+    position: absolute;
+    bottom: 0;
+    z-index: 2;
+    &-box {
       width: 100%;
-      .search-bar {
+      &-bar {
         width: 100%;
       }
-      .search-icon {
+      &-icon {
         left: 10%;
       }
+    }
+  }
+  .landing-date {
+    width: 320px;
+    text-align: left;
+    &-title {
+      font-family: $header-font;
     }
   }
 }
