@@ -4,6 +4,7 @@ import cloudy from "../../assets/images/cloudy.png";
 import rain from "../../assets/images/rain.png";
 import snow from "../../assets/images/snow.png";
 import world from "../../assets/images/world.png";
+import FadeIn from 'react-fade-in';
 
 function Results({weather, date}) {
   let todayweather;
@@ -29,18 +30,24 @@ function Results({weather, date}) {
   }
 
   return (
-    <div className="results">
-      <div className="results-info">
-        <h2 className="location">{weather.name}, {weather.sys.country}</h2>
-        <h3 className="date">{date}</h3>
+    <FadeIn>
+      <div className="results">
+        <div className="results-info">
+          <h2 className="location">{weather.name}, {weather.sys.country}</h2>
+          <h3 className="date">{date}</h3>
+        </div>
+        <FadeIn delay={500}>
+          <div className="weather" style={{width: "300px", height: "200px" ,backgroundImage: `url(${bgImg})`, backgroundSize: 'contain', backgroundRepeat: 'no-repeat'}}>
+            <h2 className="weather-temp">{Math.round(weather.main.temp)}ºC</h2>
+          </div>
+        </FadeIn>
+        <FadeIn delay={800}>
+          <div className="today">
+            <p><span>Today:</span> {todayweather}</p>
+          </div>
+        </FadeIn>
       </div>
-      <div className="weather" style={{width: "300px", height: "200px" ,backgroundImage: `url(${bgImg})`, backgroundSize: 'contain', backgroundRepeat: 'no-repeat'}}>
-        <h2 className="weather-temp">{Math.round(weather.main.temp)}ºC</h2>
-      </div>
-      <div className="today">
-        <p>Today: {todayweather}</p>
-      </div>
-    </div>
+    </FadeIn>
   );
 }
 
